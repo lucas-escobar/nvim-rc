@@ -45,6 +45,11 @@ return require('packer').startup(function(use)
 			-- Snippets
 			{'L3MON4D3/LuaSnip'},             -- Required
 			{'rafamadriz/friendly-snippets'}, -- Optional
-		}
-	}
+		},
+    use 'rust-lang/rust.vim',
+    use {
+        'windwp/nvim-autopairs',
+        config = function() require("nvim-autopairs").setup {}
+        end }
+    }
 end)
